@@ -43,9 +43,9 @@
 --------------------------------------------------------------------------*/
 
 
-
 #carousel {
   position: relative;
+  margin-top: -20px;
 
 
 
@@ -57,21 +57,24 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 170px;
+
+      
 }
 
 #slides ul {
   list-style: none;
   width: 100%;
-  height: 250px;
-  margin: 0;
+  height: 170px;
+ 
+  
   padding: 0;
   position: relative;
 }
 
 #slides li {
   width: 100%;
-  height: 250px;
+  height: 170px;
   float: left;
   text-align-last: justify;
   position: relative;
@@ -81,7 +84,7 @@
 /* Styling for prev and next buttons */
 
 
-.quote-phrase,
+
 .quote-author {
 
   font-weight: 300;
@@ -92,7 +95,7 @@
 }
 
 .quote-phrase {
-  height: 200px;
+  height: 20px;
   font-size: 24px;
   color: #FFF;
 
@@ -108,6 +111,7 @@
 }
 
 body {
+	margin-left: 30px;
 	color: #111;
 	font-family: Neusa-Regular;
 	font-size: 14px;
@@ -682,11 +686,11 @@ b, strong { font-weight: bold; }
 			3.2 Header
 	---------------------------------------------------*/
 	
-	#header .logo-wrap2 { margin: 50px 0 50px 0; }
+	#header .logo-wrap2 { margin: 30px 0 30px 0; }
 	
 .logo{
-	max-width: 100%;
-	height:auto;
+	max-width: 35%;
+	
 }
 
 	#header h1 {
@@ -855,6 +859,7 @@ padding-top: -4px;
 
 
 .imgcon + div {
+	
  position: absolute;
   left: 42%;
   top: 44%;
@@ -870,7 +875,7 @@ padding-top: -4px;
 }
 
 .imgcon {
-	
+	max-width: 85%;
  display: inline-block;
   position: relative;
 
@@ -912,7 +917,7 @@ padding-top: -4px;
 }
 
 
-	#projects .item { margin-bottom: 40px; }
+	#projects .item { margin-bottom: 60px; }
 
 		#projects .item h3 {
 			color: #b41f24;
@@ -964,7 +969,7 @@ padding-top: -4px;
 		padding-bottom: 68px;
 	margin-top: -4px;
 		letter-spacing: 4px;}
-		#header .logo-wrap { margin: 50px 0 50px 0; }
+		#header .logo-wrap { margin: 40px 0 40px 0; }
 		#carousel{ width: 78%;  }
 		#footer p {font-size:18px; line-height:17px; width: 400px;}
 		.page p.page-desc2 { color:#595959;	font-size:34px; font-family: 'Neusa ExtraBold';margin-bottom:17px; 	margin-top: -8px;}
@@ -979,7 +984,7 @@ padding-top: -4px;
 			font-size: 18px;
 			line-height: 21px;
 		}
-		
+		#view{font-size: 16px;  top:40%; left:30%;}
 		#projects.single .box-info h4 {
 				font-size: 18px; 
 				line-height: 21px; 
@@ -993,7 +998,7 @@ padding-top: -4px;
 	@media screen and (min-width: 1300px) and (max-width: 1599px) { 
 		#projects.stackgrid .item { width: 25%; }
 		.logo {width:100%;}
-		.quote-phrase  {font-size:44px; line-height:45px; text-align-last: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; width: 78%;}
+		.quote-phrase  {font-size:38px; line-height:40px; text-align-last: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; width: 78%;}
 		.i{font-size:75px; line-height:50px; text-align-last: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold;}
 		.digital p {		font-size: 18px;line-height: 21px; text-align-last: right;
 
@@ -1001,15 +1006,15 @@ padding-top: -4px;
 		padding-bottom: 68px;
 		margin-top: -4px;
 		letter-spacing: 4px;}
-		#header .logo-wrap { margin: 50px 0 50px 0; }
+		#header .logo-wrap { margin: 30px 0 20px 0; }
 		#carousel{width: 78%;  }
 		#footer p {font-size:18px; line-height:17px; width: 400px;}
 		.page p.page-desc2 { color:#595959;	font-size:34px; font-family: 'Neusa ExtraBold';margin-bottom:17px; 	margin-top: -8px;}
-		.page p.page-desc3 {	margin-top:32px;font-size: 18px;
+		.page p.page-desc3 {	margin-top:32px;font-size: 19px;
 				line-height: 21px;}
 		.border-top4 {	padding-top: 22px; margin-left: -10px;}
 		.border-top4a {	margin-top: -1px; margin-left: -310px;}
-		
+		#view{font-size: 16px;  top:40%; left:26%;}
 			#projects .box-info p {
 			
 			font-size: 18px;
@@ -1026,7 +1031,7 @@ padding-top: -4px;
 	
 	@media screen and (min-width: 960px) and (max-width: 1299px) { 
 		#projects.stackgrid .item { width: 25%; }
-		.logo {width:80%;}
+		.logo {width:40%;}
 		.quote-phrase {font-size:35px; line-height:36px; text-align-last: justify; letter-spacing: 2px; color: #595959; font-family:  Neusa ExtraBold; width: 78%; }
 		.i{font-size:60px; line-height:16px; text-align-last: justify; letter-spacing: 2px; color: #595959; font-family:  Neusa ExtraBold;margin-left:-59px;}
 		.digital p {		font-size: 18px;line-height: 21px; text-align-last: right;
@@ -1036,7 +1041,7 @@ margin-top: -4px;
 		margin-left:-53px;
 		letter-spacing: 4px;}
 		#carousel{margin-left:-58px; width: 79%; }
-		#header .logo-wrap { margin: 50px 0 0px 0; }
+		#header .logo-wrap { margin: 30px 0 20px 0; }
 		#footer p {font-size:18px; line-height:17px; width: 400px;}
 		.page p.page-desc2 { color:#595959;	font-size:34px; font-family: 'Neusa ExtraBold';margin-bottom:17px; 	margin-top: -8px;}
 		.page p.page-desc {
@@ -1055,7 +1060,7 @@ margin-top: -4px;
 			font-size: 18px;
 			line-height: 21px;
 		}
-		
+		#view{font-size: 16px;  top:35%; left:22%;}
 		#projects.single .box-info h4 {
 				font-size: 18px; 
 				line-height: 21px; 
@@ -1069,8 +1074,8 @@ margin-top: -4px;
 
 	@media screen and (min-width: 768px) and (max-width: 959px) { 
 		#projects.stackgrid .item { width: 33.333333%; }
-		.logo {width: 55%;}
-		.quote-phrase {font-size:25px; line-height:25px; text-align-last: justify; letter-spacing: 2px; color: #595959; font-family:  Neusa ExtraBold; display: block;}
+		.logo {width: 40%;}
+		.quote-phrase {font-size:25px; line-height:25px; text-align-last: justify; letter-spacing: 2px; color: #595959; font-family:  Neusa ExtraBold; width: 78%;}
 		.i{font-size:42px;line-height:50px; text-align-last: justify; letter-spacing: 1px; color: #595959; font-family:  Neusa ExtraBold; margin-left:-134px;}
 		.digital p {		font-size: 16px;line-height:18px; text-align-last: right;
 		width:83%;
@@ -1079,8 +1084,8 @@ margin-top: -4px;
 		margin-top: -4px;
 		letter-spacing: 1.2px;}
 		#carousel{margin-left:-134px; width: 83% }
-		#view{font-size: 16px;  top:36%; left: 36%;}
-		#header .logo-wrap { margin: 50px 0 -100px 0; }
+		
+		#header .logo-wrap { margin: 30px 0 20px 0; }
 		#footer p {font-size:16px; line-height:17px; width: 400px;}
 		.page p.page-desc {
 				font-size: 16px;
@@ -1101,7 +1106,7 @@ margin-top: -4px;
 		line-height: 18px;
 		
 	}
-	
+	#view{font-size: 14px;  top:32%; left:12%;}
 	#archive .entry .box-content h4 { font-size: 22px; line-height: 25px; margin-bottom:}
 		#archive .entry .box-meta span.category,
 		#archive .entry .box-meta span.date {
@@ -1111,15 +1116,15 @@ margin-top: -4px;
 		}
 		#projects .item h3 {
 			color: #b41f24;
-			font-size: 16px;
-			line-height: 18px;
+			font-size: 13px;
+			line-height: 16px;
 		font-weight: bold;}
 		
 		#projects .item span.category {
 		color: #595959;
 		display: block;
-		font-size: 16px;
-		line-height: 18px;
+		font-size: 12px;
+		line-height: 14px;
 		margin-bottom: 14px;
 	}
 
@@ -1144,8 +1149,8 @@ margin-top: -4px;
 
 	@media screen and (min-width: 480px) and (max-width: 767px) { 
 		#projects.stackgrid .item { width: 50%; }
-		.logo {width: 55%;}
-		.quote-phrase {font-size:20px; line-height:20px; text-align-last: justify; letter-spacing: 2px; color: #595959; font-family:  Neusa ExtraBold; display: block;}
+		.logo {width: 30%;}
+		.quote-phrase {font-size:20px; line-height:20px; text-align-last: justify; letter-spacing: 2px; color: #595959; font-family:  Neusa ExtraBold; width: 78%;}
 		.i{font-size:29px;line-height:40px; text-align-last: justify; letter-spacing: 1px; color: #595959; font-family:  Neusa ExtraBold; margin-left:-1px;}
 		.digital {		font-size: 16px;line-height:18px; text-align-last: right;
 		width:76%;
@@ -1154,8 +1159,8 @@ margin-top: -4px;
 		padding-top: 10px;
 		letter-spacing: 1.2px;}
 		#carousel{margin-left:0px; width: 57% }
-	#view{font-size: 16px;  top:40%; left: 40%;}
-	#header .logo-wrap { margin: 50px 0 -150px 0; }
+	#view{font-size: 0px;  top:40%; left: 20%;}
+	#header .logo-wrap { margin: 25px 0 20px 0; }
 	#footer p {font-size:16px; line-height:17px; width: 400px;}
 	
 	.page p.page-desc {
@@ -1219,8 +1224,8 @@ margin-top: -4px;
 
 	@media screen and (max-width: 479px) { 
 		#projects.stackgrid .item { width: 50%; }
-		.logo {width: 100%;}
-		.quote-phrase {font-size:30px; line-height:30px; text-align: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; display: block; }
+		.logo {width: 30%;}
+		.quote-phrase {font-size:30px; line-height:30px; text-align: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; width: 78%; }
 		.i{font-size:42px;line-height:55px; text-align-last: justify; letter-spacing: 1px; color: #595959; font-family:  Neusa ExtraBold; margin-left:-1px;}
 		.digital {		font-size: 18px;line-height:18px; text-align: right;
 		width:100%;
@@ -1229,8 +1234,8 @@ margin-top: -4px;
 		padding-top: 10px;
 		letter-spacing: 1.2px;}
 		#carousel{margin-left:-1px;   width:140%; }
-	#view{font-size: 16px;  top:37%; left: 32%;}
-	#header .logo-wrap { margin: 50px 0 -150px 0; }
+	#view{font-size: 0px;  top:37%; left: 32%;}
+	#header .logo-wrap { margin: 25px 0 20px 0; }
 	#footer p {font-size:16px; line-height:17px; width: 200px;}
 	.page p.page-desc {
 				font-size: 16px;
@@ -1299,8 +1304,8 @@ margin-top: -4px;
     and (max-device-width : 667px) {
 		
 		#projects.stackgrid .item { width: 50%; }
-		.logo {width: 100%;}
-		.quote-phrase {font-size:30px; line-height:30px; text-align: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; display: block; }
+		.logo {width: 30%;}
+		.quote-phrase {font-size:30px; line-height:30px; text-align: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; width: 55%; }
 		.i{font-size:42px;line-height:55px; text-align-last: justify; letter-spacing: 1px; color: #595959; font-family:  Neusa ExtraBold; margin-left:-1px;}
 		.digital {		font-size: 18px;line-height:18px; text-align: right;
 		width:100%;
@@ -1309,8 +1314,8 @@ margin-top: -4px;
 		padding-top: 10px;
 		letter-spacing: 1.2px;}
 		#carousel{margin-left:-1px;   width:140%; }
-	#view{font-size: 16px;  top:37%; left: 32%;}
-	#header .logo-wrap { margin: 50px 0 -150px 0; }
+	#view{font-size: 0px;  top:37%; left: 32%;}
+	#header .logo-wrap { margin: 25px 0 20px 0; }
 	#footer p {font-size:16px; line-height:17px; width: 200px;}
 		.page p.page-desc {
 				font-size: 16px;
@@ -1378,8 +1383,8 @@ margin-top: -4px;
 	@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){
 		
 		#projects.stackgrid .item { width: 50%; }
-		.logo {width: 100%;}
-		.quote-phrase {font-size:30px; line-height:30px; text-align: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; display: block; }
+		.logo {width: 30%;}
+		.quote-phrase {font-size:30px; line-height:30px; text-align: justify; letter-spacing: 3px; color: #595959; font-family:  Neusa ExtraBold; width: 35%; }
 		.i{font-size:42px;line-height:55px; text-align-last: justify; letter-spacing: 1px; color: #595959; font-family:  Neusa ExtraBold; margin-left:-1px;}
 		.digital {		font-size: 18px;line-height:18px; text-align: right;
 		width:100%;
@@ -1388,8 +1393,8 @@ margin-top: -4px;
 		padding-top: 10px;
 		letter-spacing: 1.2px;}
 		#carousel{margin-left:-1px;   width:140%; }
-	#view{font-size: 16px;  top:37%; left: 32%;}
-	#header .logo-wrap { margin: 50px 0 -150px 0; }
+	#view{font-size: 0px;  top:37%; left: 32%;}
+	#header .logo-wrap { margin: 25px 0 20px 0; }
 	#footer p {font-size:16px; line-height:17px; width: 200px;}
 	.page p.page-desc {
 				font-size: 16px;
