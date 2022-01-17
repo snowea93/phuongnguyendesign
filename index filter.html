@@ -141,26 +141,74 @@
 	<!-- Works
 	================================================== -->
 	
-	
-	
 
-	
-	
-	
-	
-	
-	
 	
 	<section id="projects">
 		<div class="container">
 			<div class="desktop-12 columns"><div class="border-top"></div></div>
-	 
-	 
+			
+
+	 <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">Show all</button>
+  <button class="btn" onclick="filterSelection('branding')">Branding</button>
+  <button class="btn" onclick="filterSelection('uxui')">UX/UI</button>
+  <button class="btn" onclick="filterSelection('advertising')">Advertising</button>
+  <button class="btn" onclick="filterSelection('motion')">Motion Graphics & Video</button>
+  <button class="btn" onclick="filterSelection('layout')">Layout</button>
+</div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+	  <div class="filterDiv branding">
 		<a href="anami.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
-							<h3>ANAMI restaurant</h3>
-							<span class="category">Branding</span>
+							<h3>ANNAMI restaurant</h3>
+							<span class="category">Idendity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -168,13 +216,15 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 	
+	<div class="filterDiv uxui">
 	<a href="wolfoo.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
+						
 							<h3>Wolfoo website</h3>
-							<span class="category">UXUI - Web</span>
+							<span class="category">UXUI</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -182,8 +232,12 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
-	
+				</a></div>
+				
+				
+				
+				
+	<div class="filterDiv advertising">
 	<a href="fwdkooki.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -196,8 +250,10 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
-	
+				</a></div>
+				
+				
+	<div class="filterDiv advertising">
 	<a href="bobbysocial.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -210,27 +266,29 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 	
-		<a href="hunteroneweb.html" class="permalink">
+			<div class="filterDiv advertising">
+			<a href="train.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
-							<h3>HunterOne website</h3>
-							<span class="category">UXUI - Web</span>
+							<h3>Savage Dog stickers</h3>
+							<span class="category">Illustration</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-							<img src="images/hunterone thumb.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
-	
+				</a></div>
+		
+		<div class="filterDiv branding">
 		<a href="humblfoods.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>Humbl. Foods</h3>
-							<span class="category">Branding, Packaging, Video</span>
+							<span class="category">Identity, Packaging, Video</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -238,23 +296,25 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 		
-		<a href="n14.html" class="permalink">
+		<div class="filterDiv motion">
+		<a href="video.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
-							<h3>N14 restaurant</h3>
-							<span class="category">Branding</span>
+							<h3>Video work</h3>
+							<span class="category">Motion graphics, Editing</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-							<img src="images/n14 thumb.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
-	
-	<a href="unicharm3dm.html" class="permalink">
+				</a></div>
+		
+		<div class="filterDiv advertising">
+<a href="unicharm3dm.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>Unicharm 3DM campaign</h3>
@@ -266,43 +326,9 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
-	
-			<a href="savagedog.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Savage Dog stickers</h3>
-							<span class="category">Illustration</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-						<img src="images/savagedog thumb.gif" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 		
-	
-		
-		
-			
-		
-		<a href="video.html" class="permalink">
-					<div class="desktop-3 mobile-half columns">
-						<div class="item">
-							<h3>Video work</h3>
-							<span class="category">Motion graphics, Editing</span>
-
-							<div class="imgwrapper">
-							<div class="imgcon">
-							<img src="images/thumb_item16.png" /></div>
-							<div id="view">judge me</div></div>
-						</div><!-- // .item -->
-					</div><!-- // .desktop-3 -->
-				</a>
-		
-
-		
+		<div class="filterDiv uxui">
 		<a href="sunlightlanding.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -311,14 +337,14 @@
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-					<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
-				
-				
+					
+				<div class="filterDiv layout">
 				<a href="sif.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -327,16 +353,28 @@
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-						<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+			<div class="filterDiv motion">	
+		<a href="edm.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>Animated EDM compilation</h3>
+							<span class="category">Digital, Motion graphics</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/logo.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a></div>
 		
-		
-		
-		
+		<div class="filterDiv advertising">
 <a href="kv.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -345,30 +383,30 @@
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-						<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 
 
 
-
+<div class="filterDiv branding">
 <a href="onetusk.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>OneTusk school supply </h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-						<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 
-
+<div class="filterDiv uxui">
 <a href="lalalogy.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -377,12 +415,13 @@
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-							<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 
+		<div class="filterDiv advertising">
 <a href="surfstb.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -391,32 +430,47 @@
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-					<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
+		
+					<div class="filterDiv uxui">
+<a href="hunteroneweb.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>HunterOne website</h3>
+							<span class="category">UXUI</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/logo.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a></div>
 
 
 
 
-
+<div class="filterDiv branding">
 <a href="insatiabledesires.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>Insatiable Desires</h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-						<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 
 				
-			
+			<div class="filterDiv uxui">
 			<a href="madamkieu.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
@@ -429,14 +483,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
-			
+			<div class="filterDiv branding">
 			<a href="unity.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>Unity Investment</h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -444,13 +498,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
+			<div class="filterDiv branding">
 			<a href="cleverdog.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>Clever Dog</h3>
-							<span class="category">Branding, Packaging</span>
+							<span class="category">Identity, Packaging</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -458,13 +513,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+				<div class="filterDiv branding">
 				<a href="hexagoncafe.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>The Hexagon Cafe</h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -472,8 +528,9 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
+			<div class="filterDiv branding">
 			<a href="cocoxim.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
@@ -486,13 +543,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
+			<div class="filterDiv uxui">
 			<a href="routify.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>Routify</h3>
-							<span class="category">Branding, UX/UI - App</span>
+							<span class="category">Identity, UX/UI - App</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -500,14 +558,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
-				
+				<div class="filterDiv branding">
 				<a href="tastee.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>Tasteé instant coffee</h3>
-							<span class="category">Branding, packaging</span>
+							<span class="category">Identity, packaging</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -515,8 +573,9 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+				<div class="filterDiv layout">
 				<a href="calendar.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
@@ -529,13 +588,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+				<div class="filterDiv layout">
 			<a href="emkoinvite.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>EmKO invitation</h3>
-							<span class="category">Branding, print</span>
+							<span class="category">Identity, print</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -543,15 +603,15 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
 				
-			
+			<div class="filterDiv branding">
 				<a href="haivinh.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
 							<h3>Hai Vinh Honey</h3>
-							<span class="category">Branding, packaging</span>
+							<span class="category">Identity, packaging</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -559,13 +619,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+				<div class="filterDiv uxui">
 			<a href="emkoweb.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>EmKO gallery</h3>
-							<span class="category">Branding, UX/UI - Web</span>
+							<span class="category">Identity, UX/UI - Web</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -574,10 +635,10 @@
 							
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
 				
-				
+					<div class="filterDiv uxui">
 				<a href="snap.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
@@ -590,14 +651,14 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
-				
+					<div class="filterDiv layout">
 				<a href="plython.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>Plython album</h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -605,15 +666,15 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
 				
-				
+				<div class="filterDiv branding">
 				<a href="pa.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>pa cafe&3D movies</h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -621,10 +682,10 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
 				
-				
+					<div class="filterDiv motion">
 				<a href="rmit.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
@@ -637,8 +698,9 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+				<div class="filterDiv motion">
 				<a href="sleepinfo.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -651,12 +713,12 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
 				
 				
 				
-			
+			<div class="filterDiv layout">
 			<a href="sports.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item first-row">
@@ -669,10 +731,10 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
 				
-				
+				<div class="filterDiv uxui">
 				<a href="pawsome.html" class="permalink">
   <div class="desktop-3 mobile-half columns">
     <div class="item">
@@ -689,8 +751,8 @@
   </div>
   <!-- // .item -->
   <!-- // .desktop-3 -->
-</a>
-				
+</a></div>
+				<div class="filterDiv uxui">
 				<a href="trashcan.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -704,9 +766,9 @@
 							
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 			
-				
+				<div class="filterDiv layout">
 				<a href="bodoni.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -719,10 +781,10 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
 				
-			
+			<div class="filterDiv motion">
 				<a href="emnwind.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -735,8 +797,9 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
+				<div class="filterDiv uxui">
 				<a href="train.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
@@ -745,20 +808,33 @@
 
 							<div class="imgwrapper">
 							<div class="imgcon">
-							<img src="images/thumb_item16.png" /></div>
+							<img src="images/logo.png" /></div>
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
-			
+				<div class="filterDiv branding">
+				<a href="shein.html" class="permalink">
+					<div class="desktop-3 mobile-half columns">
+						<div class="item">
+							<h3>N14 restaurant</h3>
+							<span class="category">Identity</span>
+
+							<div class="imgwrapper">
+							<div class="imgcon">
+							<img src="images/logo.png" /></div>
+							<div id="view">judge me</div></div>
+						</div><!-- // .item -->
+					</div><!-- // .desktop-3 -->
+				</a></div>
 				
-				
+				<div class="filterDiv branding">
 				<a href="selfbranding.html" class="permalink">
 					<div class="desktop-3 mobile-half columns">
 						<div class="item">
 							<h3>Self branding</h3>
-							<span class="category">Branding</span>
+							<span class="category">Identity</span>
 
 							<div class="imgwrapper">
 							<div class="imgcon">
@@ -766,7 +842,7 @@
 							<div id="view">judge me</div></div>
 						</div><!-- // .item -->
 					</div><!-- // .desktop-3 -->
-				</a>
+				</a></div>
 				
 				<div class="clear"></div>
 			
